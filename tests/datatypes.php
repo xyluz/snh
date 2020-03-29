@@ -15,7 +15,7 @@ $concat_string = "first String" . "second string";
 // Integer - Numbers 
 
 $int_1 = 4253534;
-$int_2 = -3425435
+$int_2 = -3425435;
 $int_3 = "3422534";
 
 //Float - Decimal

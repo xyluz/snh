@@ -14,20 +14,20 @@ $last_name = "Onifade" . " Ya";
 
 //Rules
 
-$2sdfsfs //Wrong - Cannot start variable name with a number
+//$2sdfsfs //Wrong - Cannot start variable name with a number
 
-$*ssdfsf //Wrong - cannot start with special character
+//$*ssdfsf //Wrong - cannot start with special character
 
-$_name // Correct
+$_name; // Correct
 
-$Unddsfs // Correct
+$Unddsfs; // Correct
 
 
 //Use descriptives.
 
-$medical_directors_login_username // 
+$medical_directors_login_username; // 
 
-$md_username 
+$md_username ;
 
 
 //Single line comment
