@@ -7,7 +7,7 @@ if(isset($_SESSION['loggedIn']) && !empty($_SESSION['loggedIn'])){
 // include_once('lib/header.php'); 
 
 ?>
-   
+  
 <h3>Login</h3>
     <p>
         <?php 
