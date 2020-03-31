@@ -32,7 +32,7 @@ if($errorCount > 0){
 
         if($currentUser){
           //check the user password.
-            $userString = file_get_contents("db/users/".$currentUser);
+            $userString = file_get_contents("db/users/".$currentUser->email . ".json");
             $userObject = json_decode($userString);
             $passwordFromDB = $userObject->password;
 
