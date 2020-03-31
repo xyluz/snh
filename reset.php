@@ -1,9 +1,10 @@
 <?php include_once('lib/header.php'); 
+    require_once('functions/alert.php');
+    require_once('functions/user.php');
 
 //TODO: Fix session error message display on login page
 
-
-if(!$_SESSION['loggedIn'] && !isset($_GET['token']) && !isset($_SESSION['token'])){
+if(!is_user_loggedIn() && !is_token_set()){
     $_SESSION["error"] = "You are not authorized to view that page";
     header("Location: login.php");
 }
@@ -16,18 +17,13 @@ if(!$_SESSION['loggedIn'] && !isset($_GET['token']) && !isset($_SESSION['token']
 
    <form action="processreset.php" method="POST">
    <p>
-        <?php 
-            if(isset($_SESSION['error']) && !empty($_SESSION['error'])){
-                echo "<span style='color:red'>" . $_SESSION['error'] . "</span>";
-                session_destroy();
-            }
-        ?>
+        <?php  print_alert(); ?>
     </p>
-    <?php if(!$_SESSION['loggedIn']) { ?>
+    <?php if(!is_user_loggedIn()) { ?>
     <input
             
             <?php              
-                if(isset($_SESSION['token'])){
+                if(is_token_set_in_session()){
                     echo "value='" . $_SESSION['token'] . "'";                                                             
                 }else{
                     echo "value='" . $_GET['token'] . "'";
